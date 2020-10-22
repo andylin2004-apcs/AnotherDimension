@@ -16,6 +16,9 @@ class Tester{
    { 3,  3, 3 } };
   static int[][] D = { {  2,  2, 2 },
    {  2, 2, 2 } };
+  static int[][] E = {
+    {  2,  4, 2 },
+    {  2, 2, 2 } };
   public static void main(String[] args) {
     System.out.println(ArrayOps.sum(test1));
     System.out.println(ArrayOps.sum(test2));
@@ -33,5 +36,7 @@ class Tester{
     System.out.println(ArrayOps.isColMagic(B));
     System.out.println(ArrayOps.isColMagic(C));
     System.out.println(ArrayOps.isColMagic(D));
+    System.out.println(ArrayOps.isLocationMagic(E, 0, 1));
+    System.out.println(ArrayOps.isLocationMagic(E, 1, 1));
   }
 }
