@@ -28,6 +28,9 @@ class Tester{
     System.out.println(Arrays.toString(ArrayOps.largestInRows(test3)));
     System.out.println(ArrayOps.sum(test3));
     System.out.println(Arrays.toString(ArrayOps.sumCols(A)));
+    System.out.println(Arrays.toString(ArrayOps.sumCols(B)));
+    System.out.println(Arrays.toString(ArrayOps.sumCols(C)));
+    System.out.println(Arrays.toString(ArrayOps.sumCols(D)));
     System.out.println(ArrayOps.isRowMagic(A));
     System.out.println(ArrayOps.isRowMagic(B));
     System.out.println(ArrayOps.isRowMagic(C));
