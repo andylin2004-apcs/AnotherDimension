@@ -29,10 +29,36 @@ class ArrayOps{
   }
   public static int sum(int[][] arr) {
     int[] temp = sumRows(arr);
-    int result = 0;
-    for (int i = 0; i<temp.length; i++){
-      result += temp[i];
+    return sum(temp);
+  }
+  public static int[] sumCols(int[][] matrix) {
+    int[] result = new int[matrix[1].length];
+    for (int column = 0; column<matrix[1].length; column++){
+      for (int row = 0; row<matrix.length; row++){
+        result[column] += matrix[row][column];
+      }
     }
     return result;
+  }
+  public static boolean isEqual(int[] arr){
+    for (int i = 0; i<arr.length-1; i++){
+      if(arr[i] != arr[i+1]){
+        return false;
+      }
+    }
+    return true;
+  }
+  public static boolean isRowMagic(int[][] matrix) {
+    int[] rowSum = sumRows(matrix);
+    return isEqual(rowSum);
+  }
+  public static boolean isColMagic(int[][] matrix) {
+    int[] colSum = sumCols(matrix);
+    return isEqual(colSum);
+  }
+  public static boolean isLocationMagic(int[][] matrix, int row, int col) {
+    int[] rowSum = sumRows(matrix);
+    int[] colSum = sumCols(matrix);
+    return rowSum[row] == colSum[col];
   }
 }
